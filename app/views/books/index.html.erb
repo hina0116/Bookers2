@@ -1,9 +1,11 @@
 <h1>Books</h1>
 
 <% @books.each do |book| %>
-<div>
-  <%= profile_image_tag user.get_image %>
-  <p>title:<%= book.title %></p>
-  </div>
+<dvi>
+  <%= link_to book_path(book.id) do %>
+    <%= profile_image_tag user.get_image %>
+  <% end %>
+  <p>title:<%= link_to book.title, book_path(list.id) %></p>
+</dvi>
 
 <% end %>
